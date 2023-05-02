@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: exam_results
+  - name: exam
     description: a kaggle dataset about exam results for US students in High School
-    database: EXAM
+    database: exam
     schema: public
     tables:
       - name: EXAM_DATA
@@ -37,11 +37,11 @@ sources:
               - accepted_values:
                   values:
                     - "some college"
-                    - "associate's degree"
+                    - associate\'s degree
                     - "high school"
                     - "some high school"
-                    - "bachelor's degree"
-                    - "master's degree"
+                    - bachelor\'s degree
+                    - master\'s degree
 
           - name: LUNCH
             description: Whether or not the student's lunch was free/reduced
