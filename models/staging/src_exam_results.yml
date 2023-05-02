@@ -1,0 +1,79 @@
+version: 2
+
+sources:
+  - name: exam_results
+    description: a kaggle dataset about exam results for US students in High School
+    database: EXAM
+    schema: public
+    tables:
+      - name: EXAM_DATA
+        description: the raw exam results data
+        columns:
+          - name: GENDER
+            description: the gender of the student
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "male"
+                    - "female"
+
+          - name: RACE
+            description: The race / group the student belongs to (anonymized)
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "group A"
+                    - "group B"
+                    - "group C"
+                    - "group D"
+                    - "group E"
+          
+          - name: PARENT_EDUCATION
+            description: Level of education of the parents
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "some college"
+                    - "associate's degree"
+                    - "high school"
+                    - "some high school"
+                    - "bachelor's degree"
+                    - "master's degree"
+
+          - name: LUNCH
+            description: Whether or not the student's lunch was free/reduced
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "standard"
+                    - "free/reduced"
+
+          - name: TEST_PREP
+            description: Whether or not the student completed the exam preparation test
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "none"
+                    - "completed"
+                  
+          - name: MATH_SCORE
+            description: Math exam score
+            tests:
+              - not_null
+          
+          - name: READING_SCORE
+            description: Reading exam score
+            tests:
+              - not_null
+          
+          - name: WRITING_SCORE
+            description: Writing exam score
+            tests:
+              - not_null
+                    
+                    
