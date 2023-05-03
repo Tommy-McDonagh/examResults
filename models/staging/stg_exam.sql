@@ -2,7 +2,7 @@ with exam as (
 
     select
         gender,
-        race,
+        replace(race, ' ', '_') as race,
         replace(parent_education, '''', '') as parent_education,
         lunch,
         test_prep,
