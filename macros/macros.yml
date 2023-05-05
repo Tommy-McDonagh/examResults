@@ -1,7 +1,7 @@
 version: 2
 
 macros:
-  - name: OHE
+  - name: one_hot_encode
     description: 'This is a macro that one-hot-encodes a given column by its given possible values.'
 
   - name: binarizer
