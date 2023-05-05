@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: exam_plain
+    description: 'This is a table with the raw data with just the column name changes.'
+  
+  - name: exam_encoded
+    description: 'This is a table that makes use of the binarizer.sql and OHE.sql macros to encode the data in each of categorical columns so that ML algorithms can deal with them without transforming them themselves.'
