@@ -3,3 +3,70 @@ version: 2
 models:
   - name: stg_exam
     description: 'This is a view that renames columns in the src data to remove apostrophes, spaces and slashes so that later transformations are more straightforward.'
+    columns:
+      - name: GENDER
+        description: the gender of the student
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "male"
+                - "female"
+
+      - name: RACE
+        description: The race / group the student belongs to (anonymized)
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "group_A"
+                - "group_B"
+                - "group_C"
+                - "group_D"
+                - "group_E"
+      
+      - name: PARENT_EDUCATION
+        description: Level of education of the parents
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "some_college"
+                - associates_degree
+                - "high_school"
+                - "some_high_school"
+                - bachelors_degree
+                - masters_degree
+
+      - name: LUNCH
+        description: Whether or not the student's lunch was free/reduced
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "standard"
+                - "free_reduced"
+
+      - name: TEST_PREP
+        description: Whether or not the student completed the exam preparation test
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "none"
+                - "completed"
+              
+      - name: MATH_SCORE
+        description: Math exam score
+        tests:
+          - not_null
+      
+      - name: READING_SCORE
+        description: Reading exam score
+        tests:
+          - not_null
+      
+      - name: WRITING_SCORE
+        description: Writing exam score
+        tests:
+          - not_null
