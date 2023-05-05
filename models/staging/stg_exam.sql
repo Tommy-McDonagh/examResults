@@ -1,3 +1,6 @@
+{{ config(description = 'This is a view that renames columns in the src data to remove apostrophes, spaces and slashes
+                         so that later transformations are more straightforward.') }}
+
 with exam as (
 
     select

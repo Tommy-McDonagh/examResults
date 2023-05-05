@@ -1,3 +1,7 @@
+{{ config(description = 'This is a table that makes use of the binarizer.sql and OHE.sql macros to 
+                        encode the data in each of categorical columns so that ML algorithms 
+                        can deal with them without transforming them themselves.') }}
+
 WITH data AS (
   SELECT
     *
