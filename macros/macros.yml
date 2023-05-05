@@ -1,0 +1,8 @@
+version: 2
+
+macros:
+  - name: OHE
+    description: 'This is a macro that one-hot-encodes a given column by its given possible values.'
+
+  - name: binarizer
+    description: 'This is a macro that binarizes a given column name by a given value.'
